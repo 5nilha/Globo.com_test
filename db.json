@@ -6,28 +6,28 @@
       "subtitle": "Inglês",
       "duration": "2h 05m",
       "synopsis": "Um dos maiores sucessos de todos os tempos do cinema francês, Intocáveis, lançado em 2012, ganha aqui seu inevitável remake hollywoodiano. Bryan Cranston, o eterno Walter White de Breaking Bad, assume o papel do milionário tetraplégico que contrata um homem negro com um passado problemático para ser seu assistente e ajudá-lo nas tarefas do dia a dia – o personagem é vivido pelo comediante Kevin Hart. Os dois homens têm dificuldade para se aproximar, mas acabam desenvolvendo uma forte amizade.",
-      "reviews": 4,
+      "reviews": 4.0,
       "movie_category": "Comédia e Drama",
       "released_at": 1547186400
     },
     {
-      "cover_image": "https://assets.voxcinemas.com/posters/P_HO00006396.jpg",
-      "title": "Amigos Para Sempre",
+      "cover_image": "",
+      "title": "Homem aranha de volta ao lar",
       "subtitle": "Inglês",
       "duration": "2h 05m",
-      "synopsis": "Um dos maiores sucessos de todos os tempos do cinema francês, Intocáveis, lançado em 2012, ganha aqui seu inevitável remake hollywoodiano. Bryan Cranston, o eterno Walter White de Breaking Bad, assume o papel do milionário tetraplégico que contrata um homem negro com um passado problemático para ser seu assistente e ajudá-lo nas tarefas do dia a dia – o personagem é vivido pelo comediante Kevin Hart. Os dois homens têm dificuldade para se aproximar, mas acabam desenvolvendo uma forte amizade.",
-      "reviews": 4,
-      "movie_category": "Comédia e Drama",
+      "synopsis": "Depois de atuar ao lado dos Vingadores, chegou a hora do pequeno Peter Parker (Tom Holland) voltar para casa e para a sua vida, já não mais tão normal. Lutando diariamente contra pequenos crimes nas redondezas, ele pensa ter encontrado a missão de sua vida quando o terrível vilão Abutre (Michael Keaton) surge amedrontando a cidade. O problema é que a tarefa não será tão fácil como ele imaginava.",
+      "reviews": 4.5,
+      "movie_category": "Ação",
       "released_at": 1547186400
     },
     {
-      "cover_image": "https://assets.voxcinemas.com/posters/P_HO00006396.jpg",
-      "title": "Amigos Para Sempre",
+      "cover_image": "",
+      "title": "Coringa",
       "subtitle": "Inglês",
       "duration": "2h 05m",
-      "synopsis": "Um dos maiores sucessos de todos os tempos do cinema francês, Intocáveis, lançado em 2012, ganha aqui seu inevitável remake hollywoodiano. Bryan Cranston, o eterno Walter White de Breaking Bad, assume o papel do milionário tetraplégico que contrata um homem negro com um passado problemático para ser seu assistente e ajudá-lo nas tarefas do dia a dia – o personagem é vivido pelo comediante Kevin Hart. Os dois homens têm dificuldade para se aproximar, mas acabam desenvolvendo uma forte amizade.",
-      "reviews": 4,
-      "movie_category": "Comédia e Drama",
+      "synopsis": "Arthur Fleck (Joaquin Phoenix) trabalha como palhaço para uma agência de talentos e, toda semana, precisa comparecer a uma agente social, devido aos seus conhecidos problemas mentais. Após ser demitido, Fleck reage mal à gozação de três homens em pleno metrô e os mata. Os assassinatos iniciam um movimento popular contra a elite de Gotham City, da qual Thomas Wayne (Brett Cullen) é seu maior representante.",
+      "reviews": 3.8,
+      "movie_category": "Drama",
       "released_at": 1547186400
     }
   ]
