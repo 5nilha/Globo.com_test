@@ -7,78 +7,53 @@
 //
 
 import Foundation
-
-enum NetworkError: Error {
-    case decodingError
-    case domainError
-    case urlError
-}
-
-
-enum HttpMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
-struct Resource<T: Codable> {
-    let url: URL
-    var httpMethod: HttpMethod = .get
-    var body: Data? = nil
-    
-}
+import Alamofire
 
 class Webservices {
     
-    static func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> () ) {
-        
-        //Creates the URL request, methods and body for http request
-        var request = URLRequest(url: resource.url)
-        request.httpMethod = resource.httpMethod.rawValue
-        request.httpBody = resource.body
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        //Starts the URL section
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                completion(.failure(.domainError))
-            }
-            guard let data = data else {
-                completion(.failure(.domainError))
+    static func fetchFilmes(completion: @escaping ([FilmeViewModel]?) -> ()) {
+        guard let url = URL(string: "https://my-json-server.typicode.com/5nilha/Globo.com_test/db") else {
+            completion(nil)
+            return
+        }
+        Alamofire.request(url, method: .get).validate().responseJSON { (response) in
+            let result = response.result
+            if !result.isSuccess {
+                print("Error while fetching remote rooms: \(String(describing: response.result.error))")
+                completion(nil)
                 return
             }
-            
-            let result = try? JSONDecoder().decode(T.self, from: data)
-            if let result = result {
-                DispatchQueue.main.async {
-                    completion(.success(result))
-                }
-            } else {
-                completion(.failure(.decodingError))
-            }
-        }.resume()
-    }
-    
-    
-    static func loadJson(completion: @escaping (Result<[String : Any], Error>) -> ()) {
-        if let path = Bundle.main.path(forResource: "filmes", ofType: "json") {
-            
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-
-                
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject> {
-                    completion(.success(jsonResult))
-                }
-             
-            } catch {
-               
+            guard let value = result.value as? [String : Any], let filmesData = value["filmes"] as? [[String : Any]] else {
+                completion(nil)
                 return
             }
-            
+            print(filmesData)
+            var filmes = [FilmeViewModel]()
+            for filmeDic in filmesData {
+                let filme = FilmeViewModel(filmeJSON: filmeDic)
+                if filme != nil {
+                    filmes.append(filme!)
+                }
+            }
+            filmes.sort { (a, b) -> Bool in
+                return a.title < b.title
+            }
+            completion(filmes)
             
         }
     }
     
+    
+    func deleteRealmAuthentication(token: String) {
+        guard let url = URL(string: "http://my-ros-instance:9080/auth/user/:user_id") else {
+            return
+        }
+        
+        let userToken = token
+        let headers = ["Authorization": userToken]
+        
+        Alamofire.request(url, method: .delete, headers: headers).responseJSON { (response) in
+            print(response.result)
+        }
+    }
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,13 +18,36 @@
 		3E0D3B3D239C3385000ABD34 /* FilmesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B3C239C3385000ABD34 /* FilmesListViewController.swift */; };
 		3E0D3B3F239C3643000ABD34 /* FilmeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B3E239C3643000ABD34 /* FilmeViewModel.swift */; };
 		3E0D3B46239C4131000ABD34 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B45239C4131000ABD34 /* Date+Extension.swift */; };
-		3E0D3B4B239C4CB6000ABD34 /* CategoryFilmListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B4A239C4CB6000ABD34 /* CategoryFilmListTableViewCell.swift */; };
 		3E0D3B50239C591C000ABD34 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B4F239C591C000ABD34 /* Extension+View.swift */; };
 		3E0D3B52239C61F9000ABD34 /* FilmeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B51239C61F9000ABD34 /* FilmeDetailView.swift */; };
 		3E0D3B54239C6F3B000ABD34 /* FilmeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B53239C6F3B000ABD34 /* FilmeCollectionCell.swift */; };
 		3E0D3B56239C7669000ABD34 /* FilmesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B55239C7669000ABD34 /* FilmesListViewModel.swift */; };
-		3E0D3B58239C7E13000ABD34 /* filmes.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D3B57239C7E13000ABD34 /* filmes.json */; };
+		3E0D3B61239D12FC000ABD34 /* Globo_com_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B60239D12FC000ABD34 /* Globo_com_testTests.swift */; };
+		3E0D3B71239D1DA2000ABD34 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B70239D1DA2000ABD34 /* User.swift */; };
+		3E0D3B7B239DBA08000ABD34 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B7A239DBA08000ABD34 /* UserViewModel.swift */; };
+		3E0D3B81239DC850000ABD34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B80239DC850000ABD34 /* LoginViewController.swift */; };
+		3E0D3B83239DCA7F000ABD34 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B82239DCA7F000ABD34 /* SignUpViewController.swift */; };
+		3E0D3B85239DD0E4000ABD34 /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B84239DD0E4000ABD34 /* Extension+ViewController.swift */; };
+		3E0D3B87239E0FFF000ABD34 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B86239E0FFF000ABD34 /* Database.swift */; };
+		3E0D3B8B239E1570000ABD34 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B8A239E1570000ABD34 /* UserEntity.swift */; };
+		3E0D3B8D239E1F4E000ABD34 /* FavoriteFilmeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B8C239E1F4E000ABD34 /* FavoriteFilmeEntity.swift */; };
+		3E0D3B8F239E3144000ABD34 /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B8E239E3144000ABD34 /* AuthVM.swift */; };
+		3E0D3B91239E41E7000ABD34 /* FilmesGridListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B90239E41E7000ABD34 /* FilmesGridListController.swift */; };
+		3E0D3B93239E453D000ABD34 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B92239E453D000ABD34 /* SectionHeader.swift */; };
+		3E0D3B96239E5246000ABD34 /* FilmePopUpDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B95239E5246000ABD34 /* FilmePopUpDetailController.swift */; };
+		3E6A25AC239F062100636F4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A25AB239F062000636F4E /* GoogleService-Info.plist */; };
+		F6662161A0CD243FA789411B /* Pods_Globo_com_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73564A392130E4FC5167A240 /* Pods_Globo_com_test.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E0D3B63239D12FC000ABD34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E0D3B13239C25E4000ABD34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E0D3B1A239C25E4000ABD34;
+			remoteInfo = Globo.com_test;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E0D3B1B239C25E4000ABD34 /* Globo.com_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globo.com_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,16 +63,41 @@
 		3E0D3B3C239C3385000ABD34 /* FilmesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesListViewController.swift; sourceTree = "<group>"; };
 		3E0D3B3E239C3643000ABD34 /* FilmeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeViewModel.swift; sourceTree = "<group>"; };
 		3E0D3B45239C4131000ABD34 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		3E0D3B4A239C4CB6000ABD34 /* CategoryFilmListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilmListTableViewCell.swift; sourceTree = "<group>"; };
 		3E0D3B4F239C591C000ABD34 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		3E0D3B51239C61F9000ABD34 /* FilmeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeDetailView.swift; sourceTree = "<group>"; };
 		3E0D3B53239C6F3B000ABD34 /* FilmeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeCollectionCell.swift; sourceTree = "<group>"; };
 		3E0D3B55239C7669000ABD34 /* FilmesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesListViewModel.swift; sourceTree = "<group>"; };
-		3E0D3B57239C7E13000ABD34 /* filmes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = filmes.json; path = ../../../../../Downloads/filmes.json; sourceTree = "<group>"; };
+		3E0D3B5E239D12FB000ABD34 /* Globo.com_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Globo.com_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E0D3B60239D12FC000ABD34 /* Globo_com_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globo_com_testTests.swift; sourceTree = "<group>"; };
+		3E0D3B62239D12FC000ABD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0D3B70239D1DA2000ABD34 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E0D3B7A239DBA08000ABD34 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		3E0D3B80239DC850000ABD34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3E0D3B82239DCA7F000ABD34 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3E0D3B84239DD0E4000ABD34 /* Extension+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
+		3E0D3B86239E0FFF000ABD34 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		3E0D3B8A239E1570000ABD34 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		3E0D3B8C239E1F4E000ABD34 /* FavoriteFilmeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFilmeEntity.swift; sourceTree = "<group>"; };
+		3E0D3B8E239E3144000ABD34 /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		3E0D3B90239E41E7000ABD34 /* FilmesGridListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesGridListController.swift; sourceTree = "<group>"; };
+		3E0D3B92239E453D000ABD34 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		3E0D3B95239E5246000ABD34 /* FilmePopUpDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmePopUpDetailController.swift; sourceTree = "<group>"; };
+		3E6A25AB239F062000636F4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58B62CAAD66812CA0A10EDBA /* Pods-Globo.com_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globo.com_test.release.xcconfig"; path = "Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test.release.xcconfig"; sourceTree = "<group>"; };
+		73564A392130E4FC5167A240 /* Pods_Globo_com_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Globo_com_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5D444F2295D0DC86B4789C /* Pods-Globo.com_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globo.com_test.debug.xcconfig"; path = "Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3E0D3B18239C25E4000ABD34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6662161A0CD243FA789411B /* Pods_Globo_com_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0D3B5B239D12FB000ABD34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				3E0D3B1D239C25E4000ABD34 /* Globo.com_test */,
+				3E0D3B5F239D12FC000ABD34 /* Globo.com_testTests */,
 				3E0D3B1C239C25E4000ABD34 /* Products */,
+				E521D57DAE69C3B55F537EA4 /* Pods */,
+				F3466D7B2FD0CF952B7F6CED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3E0D3B1B239C25E4000ABD34 /* Globo.com_test.app */,
+				3E0D3B5E239D12FB000ABD34 /* Globo.com_testTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +130,7 @@
 		3E0D3B1D239C25E4000ABD34 /* Globo.com_test */ = {
 			isa = PBXGroup;
 			children = (
+				3E0D3B59239D0F80000ABD34 /* Properties */,
 				3E0D3B41239C3FD9000ABD34 /* Extensions */,
 				3E0D3B3B239C3330000ABD34 /* Views */,
 				3E0D3B38239C2DA7000ABD34 /* Services */,
@@ -89,6 +142,7 @@
 				3E0D3B24239C25E4000ABD34 /* Main.storyboard */,
 				3E0D3B27239C25E6000ABD34 /* Assets.xcassets */,
 				3E0D3B29239C25E6000ABD34 /* LaunchScreen.storyboard */,
+				3E6A25AB239F062000636F4E /* GoogleService-Info.plist */,
 				3E0D3B2C239C25E6000ABD34 /* Info.plist */,
 			);
 			path = Globo.com_test;
@@ -97,7 +151,8 @@
 		3E0D3B32239C2606000ABD34 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3E0D3B36239C29B6000ABD34 /* Filme.swift */,
+				3E0D3B6F239D1D8F000ABD34 /* User */,
+				3E0D3B6E239D1D84000ABD34 /* Filme */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,8 +160,10 @@
 		3E0D3B33239C261B000ABD34 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3E0D3B3E239C3643000ABD34 /* FilmeViewModel.swift */,
-				3E0D3B55239C7669000ABD34 /* FilmesListViewModel.swift */,
+				3E0D3B7C239DC3F9000ABD34 /* AuthVM */,
+				3E0D3B79239DB9ED000ABD34 /* UserVM */,
+				3E0D3B73239D8BFB000ABD34 /* LoginVM */,
+				3E0D3B72239D8BEC000ABD34 /* FilmesVM */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -114,7 +171,7 @@
 		3E0D3B38239C2DA7000ABD34 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3E0D3B57239C7E13000ABD34 /* filmes.json */,
+				3E0D3B88239E153D000ABD34 /* Database */,
 				3E0D3B39239C2DBF000ABD34 /* Webservices.swift */,
 			);
 			path = Services;
@@ -123,10 +180,8 @@
 		3E0D3B3B239C3330000ABD34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3E0D3B3C239C3385000ABD34 /* FilmesListViewController.swift */,
-				3E0D3B4A239C4CB6000ABD34 /* CategoryFilmListTableViewCell.swift */,
-				3E0D3B51239C61F9000ABD34 /* FilmeDetailView.swift */,
-				3E0D3B53239C6F3B000ABD34 /* FilmeCollectionCell.swift */,
+				3E0D3B7F239DC82F000ABD34 /* Welcome */,
+				3E0D3B6C239D1D28000ABD34 /* Filmes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,8 +191,170 @@
 			children = (
 				3E0D3B45239C4131000ABD34 /* Date+Extension.swift */,
 				3E0D3B4F239C591C000ABD34 /* Extension+View.swift */,
+				3E0D3B84239DD0E4000ABD34 /* Extension+ViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E0D3B59239D0F80000ABD34 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Properties;
+			sourceTree = "<group>";
+		};
+		3E0D3B5F239D12FC000ABD34 /* Globo.com_testTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B60239D12FC000ABD34 /* Globo_com_testTests.swift */,
+				3E0D3B62239D12FC000ABD34 /* Info.plist */,
+			);
+			path = Globo.com_testTests;
+			sourceTree = "<group>";
+		};
+		3E0D3B6A239D1CEF000ABD34 /* FilmesListViews */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B3C239C3385000ABD34 /* FilmesListViewController.swift */,
+				3E0D3B90239E41E7000ABD34 /* FilmesGridListController.swift */,
+			);
+			path = FilmesListViews;
+			sourceTree = "<group>";
+		};
+		3E0D3B6B239D1D07000ABD34 /* FilmesCells */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B53239C6F3B000ABD34 /* FilmeCollectionCell.swift */,
+			);
+			path = FilmesCells;
+			sourceTree = "<group>";
+		};
+		3E0D3B6C239D1D28000ABD34 /* Filmes */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B97239E65FC000ABD34 /* FavoriteFilmes */,
+				3E0D3B94239E45B4000ABD34 /* CategoryHeader */,
+				3E0D3B6D239D1D58000ABD34 /* FilmeDetail */,
+				3E0D3B6A239D1CEF000ABD34 /* FilmesListViews */,
+				3E0D3B6B239D1D07000ABD34 /* FilmesCells */,
+				3E0D3B95239E5246000ABD34 /* FilmePopUpDetailController.swift */,
+			);
+			path = Filmes;
+			sourceTree = "<group>";
+		};
+		3E0D3B6D239D1D58000ABD34 /* FilmeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B51239C61F9000ABD34 /* FilmeDetailView.swift */,
+			);
+			path = FilmeDetail;
+			sourceTree = "<group>";
+		};
+		3E0D3B6E239D1D84000ABD34 /* Filme */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B36239C29B6000ABD34 /* Filme.swift */,
+			);
+			path = Filme;
+			sourceTree = "<group>";
+		};
+		3E0D3B6F239D1D8F000ABD34 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B70239D1DA2000ABD34 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3E0D3B72239D8BEC000ABD34 /* FilmesVM */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B3E239C3643000ABD34 /* FilmeViewModel.swift */,
+				3E0D3B55239C7669000ABD34 /* FilmesListViewModel.swift */,
+			);
+			path = FilmesVM;
+			sourceTree = "<group>";
+		};
+		3E0D3B73239D8BFB000ABD34 /* LoginVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginVM;
+			sourceTree = "<group>";
+		};
+		3E0D3B79239DB9ED000ABD34 /* UserVM */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B7A239DBA08000ABD34 /* UserViewModel.swift */,
+			);
+			path = UserVM;
+			sourceTree = "<group>";
+		};
+		3E0D3B7C239DC3F9000ABD34 /* AuthVM */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B8E239E3144000ABD34 /* AuthVM.swift */,
+			);
+			path = AuthVM;
+			sourceTree = "<group>";
+		};
+		3E0D3B7F239DC82F000ABD34 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B80239DC850000ABD34 /* LoginViewController.swift */,
+				3E0D3B82239DCA7F000ABD34 /* SignUpViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		3E0D3B88239E153D000ABD34 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B86239E0FFF000ABD34 /* Database.swift */,
+				3E0D3B89239E1549000ABD34 /* Entities */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		3E0D3B89239E1549000ABD34 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B8A239E1570000ABD34 /* UserEntity.swift */,
+				3E0D3B8C239E1F4E000ABD34 /* FavoriteFilmeEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3E0D3B94239E45B4000ABD34 /* CategoryHeader */ = {
+			isa = PBXGroup;
+			children = (
+				3E0D3B92239E453D000ABD34 /* SectionHeader.swift */,
+			);
+			path = CategoryHeader;
+			sourceTree = "<group>";
+		};
+		3E0D3B97239E65FC000ABD34 /* FavoriteFilmes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteFilmes;
+			sourceTree = "<group>";
+		};
+		E521D57DAE69C3B55F537EA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD5D444F2295D0DC86B4789C /* Pods-Globo.com_test.debug.xcconfig */,
+				58B62CAAD66812CA0A10EDBA /* Pods-Globo.com_test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3466D7B2FD0CF952B7F6CED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73564A392130E4FC5167A240 /* Pods_Globo_com_test.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E0D3B2F239C25E6000ABD34 /* Build configuration list for PBXNativeTarget "Globo.com_test" */;
 			buildPhases = (
+				EEB2DFCA70CC2C4CF03BA927 /* [CP] Check Pods Manifest.lock */,
 				3E0D3B17239C25E4000ABD34 /* Sources */,
 				3E0D3B18239C25E4000ABD34 /* Frameworks */,
 				3E0D3B19239C25E4000ABD34 /* Resources */,
+				78E85520C82723695EF1116C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +378,24 @@
 			productName = Globo.com_test;
 			productReference = 3E0D3B1B239C25E4000ABD34 /* Globo.com_test.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3E0D3B5D239D12FB000ABD34 /* Globo.com_testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E0D3B65239D12FC000ABD34 /* Build configuration list for PBXNativeTarget "Globo.com_testTests" */;
+			buildPhases = (
+				3E0D3B5A239D12FB000ABD34 /* Sources */,
+				3E0D3B5B239D12FB000ABD34 /* Frameworks */,
+				3E0D3B5C239D12FB000ABD34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E0D3B64239D12FC000ABD34 /* PBXTargetDependency */,
+			);
+			name = Globo.com_testTests;
+			productName = Globo.com_testTests;
+			productReference = 3E0D3B5E239D12FB000ABD34 /* Globo.com_testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -172,6 +409,10 @@
 				TargetAttributes = {
 					3E0D3B1A239C25E4000ABD34 = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					3E0D3B5D239D12FB000ABD34 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 3E0D3B1A239C25E4000ABD34;
 					};
 				};
 			};
@@ -189,6 +430,7 @@
 			projectRoot = "";
 			targets = (
 				3E0D3B1A239C25E4000ABD34 /* Globo.com_test */,
+				3E0D3B5D239D12FB000ABD34 /* Globo.com_testTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,36 +441,112 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0D3B2B239C25E6000ABD34 /* LaunchScreen.storyboard in Resources */,
+				3E6A25AC239F062100636F4E /* GoogleService-Info.plist in Resources */,
 				3E0D3B28239C25E6000ABD34 /* Assets.xcassets in Resources */,
 				3E0D3B26239C25E4000ABD34 /* Main.storyboard in Resources */,
-				3E0D3B58239C7E13000ABD34 /* filmes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E0D3B5C239D12FB000ABD34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78E85520C82723695EF1116C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB2DFCA70CC2C4CF03BA927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Globo.com_test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E0D3B17239C25E4000ABD34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0D3B81239DC850000ABD34 /* LoginViewController.swift in Sources */,
 				3E0D3B23239C25E4000ABD34 /* ViewController.swift in Sources */,
-				3E0D3B4B239C4CB6000ABD34 /* CategoryFilmListTableViewCell.swift in Sources */,
+				3E0D3B91239E41E7000ABD34 /* FilmesGridListController.swift in Sources */,
 				3E0D3B1F239C25E4000ABD34 /* AppDelegate.swift in Sources */,
 				3E0D3B3D239C3385000ABD34 /* FilmesListViewController.swift in Sources */,
 				3E0D3B50239C591C000ABD34 /* Extension+View.swift in Sources */,
 				3E0D3B3F239C3643000ABD34 /* FilmeViewModel.swift in Sources */,
+				3E0D3B8D239E1F4E000ABD34 /* FavoriteFilmeEntity.swift in Sources */,
+				3E0D3B8F239E3144000ABD34 /* AuthVM.swift in Sources */,
+				3E0D3B83239DCA7F000ABD34 /* SignUpViewController.swift in Sources */,
+				3E0D3B71239D1DA2000ABD34 /* User.swift in Sources */,
+				3E0D3B8B239E1570000ABD34 /* UserEntity.swift in Sources */,
 				3E0D3B21239C25E4000ABD34 /* SceneDelegate.swift in Sources */,
+				3E0D3B87239E0FFF000ABD34 /* Database.swift in Sources */,
+				3E0D3B85239DD0E4000ABD34 /* Extension+ViewController.swift in Sources */,
+				3E0D3B7B239DBA08000ABD34 /* UserViewModel.swift in Sources */,
+				3E0D3B96239E5246000ABD34 /* FilmePopUpDetailController.swift in Sources */,
 				3E0D3B37239C29B6000ABD34 /* Filme.swift in Sources */,
 				3E0D3B3A239C2DBF000ABD34 /* Webservices.swift in Sources */,
 				3E0D3B46239C4131000ABD34 /* Date+Extension.swift in Sources */,
+				3E0D3B93239E453D000ABD34 /* SectionHeader.swift in Sources */,
 				3E0D3B56239C7669000ABD34 /* FilmesListViewModel.swift in Sources */,
 				3E0D3B52239C61F9000ABD34 /* FilmeDetailView.swift in Sources */,
 				3E0D3B54239C6F3B000ABD34 /* FilmeCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3E0D3B5A239D12FB000ABD34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E0D3B61239D12FC000ABD34 /* Globo_com_testTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E0D3B64239D12FC000ABD34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E0D3B1A239C25E4000ABD34 /* Globo.com_test */;
+			targetProxy = 3E0D3B63239D12FC000ABD34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3E0D3B24239C25E4000ABD34 /* Main.storyboard */ = {
@@ -366,6 +684,7 @@
 		};
 		3E0D3B30239C25E6000ABD34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5D444F2295D0DC86B4789C /* Pods-Globo.com_test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +703,7 @@
 		};
 		3E0D3B31239C25E6000ABD34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58B62CAAD66812CA0A10EDBA /* Pods-Globo.com_test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -397,6 +717,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E0D3B66239D12FC000ABD34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U8M84SE4ND;
+				INFOPLIST_FILE = Globo.com_testTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "FabioQuintanilha.Globo-com-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Globo.com_test.app/Globo.com_test";
+			};
+			name = Debug;
+		};
+		3E0D3B67239D12FC000ABD34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U8M84SE4ND;
+				INFOPLIST_FILE = Globo.com_testTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "FabioQuintanilha.Globo-com-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Globo.com_test.app/Globo.com_test";
 			};
 			name = Release;
 		};
@@ -417,6 +777,15 @@
 			buildConfigurations = (
 				3E0D3B30239C25E6000ABD34 /* Debug */,
 				3E0D3B31239C25E6000ABD34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E0D3B65239D12FC000ABD34 /* Build configuration list for PBXNativeTarget "Globo.com_testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E0D3B66239D12FC000ABD34 /* Debug */,
+				3E0D3B67239D12FC000ABD34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

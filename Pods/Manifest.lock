@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (4.9.1)
+  - RNCryptor (5.1.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - RNCryptor
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`, branch `master`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - RNCryptor
+
+EXTERNAL SOURCES:
+  SQLite.swift:
+    :branch: master
+    :git: https://github.com/stephencelis/SQLite.swift.git
+
+CHECKOUT OPTIONS:
+  SQLite.swift:
+    :commit: 0a9893ec030501a3956bee572d6b4fdd3ae158a1
+    :git: https://github.com/stephencelis/SQLite.swift.git
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  RNCryptor: a369134686cd2ad391323cc856b62e591193ba79
+  SQLite.swift: 5e0f310cac904e4317ffb620c845df67cbbf9536
+
+PODFILE CHECKSUM: 5e6d3c6b9fee484418ad75aefa6d69fa14c0cdd1
+
+COCOAPODS: 1.8.4

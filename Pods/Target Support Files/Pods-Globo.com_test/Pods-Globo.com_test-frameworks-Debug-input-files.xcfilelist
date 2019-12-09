@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework
+${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework
