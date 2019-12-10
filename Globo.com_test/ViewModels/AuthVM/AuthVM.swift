@@ -15,15 +15,6 @@ struct AuthVM {
     
     private let tokenIdentifier = "TokenIdentifier"
     
-    private func storeToken(token: String) {
-        UserDefaults.standard.set(token, forKey: self.tokenIdentifier)
-    }
-    
-    private func checkUserToken() -> String {
-        let token = UserDefaults.standard.value(forKey: tokenIdentifier)
-        return token as! String
-    }
-    
     func signInUser(email: String, password: String) -> UserViewModel? {
         //TODO: Create an user authentication
         let token = self.checkUserToken()
@@ -58,13 +49,27 @@ struct AuthVM {
         }
     }
     
-    func encryptPassword(message: String, encryptionKey: String) throws -> String {
+    func signOut() {
+        USER = nil
+    }
+    
+    private func storeToken(token: String) {
+        UserDefaults.standard.set(token, forKey: self.tokenIdentifier)
+    }
+    
+    private func checkUserToken() -> String {
+        let token = UserDefaults.standard.value(forKey: tokenIdentifier)
+        return token as! String
+    }
+    
+    
+    private func encryptPassword(message: String, encryptionKey: String) throws -> String {
         let messageData = message.data(using: .utf8)!
         let cipherData = RNCryptor.encrypt(data: messageData, withPassword: encryptionKey)
         return cipherData.base64EncodedString()
     }
 
-    func decryptPassword(encryptedMessage: String, encryptionKey: String) throws -> String {
+    private func decryptPassword(encryptedMessage: String, encryptionKey: String) throws -> String {
 
         let encryptedData = Data.init(base64Encoded: encryptedMessage)!
         let decryptedData = try RNCryptor.decrypt(data: encryptedData, withPassword: encryptionKey)
