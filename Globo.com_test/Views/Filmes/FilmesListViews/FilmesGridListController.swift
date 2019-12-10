@@ -8,26 +8,37 @@
 
 import UIKit
 
-class FilmesGridListController: UIViewController, FilmesViewDelegate {
+class FilmesGridListController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     fileprivate lazy var segmentedControl = UISegmentedControl(items: ["Todos os Filmes", "Favoritos"])
+    private lazy var logoImage = UIImageView(image: UIImage(named: "logo"))
+    private lazy var splashView = UIView()
 
     fileprivate var filmesListViewModel: FilmesListViewModel!
     private var selectedFilme: FilmeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setDelegates()
+        self.setupSplash()
+        self.setupUI()
+        self.filmesListViewModel.loadFilmes()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           self.scaleUpAnimation()
+       }
+    
+    func setDelegates() {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.filmesListViewModel = FilmesListViewModel()
         self.filmesListViewModel.delegate = self
-        setupView()
-        self.filmesListViewModel.loadFilmes()
-        
     }
     
-    func setupView() {
+    func setupUI() {
         self.segmentedControl.frame = CGRect(x: 0, y: 0, width: 300, height: 30)
         self.segmentedControl.tintColor = .white
         self.segmentedControl.backgroundColor = .orange
@@ -46,10 +57,6 @@ class FilmesGridListController: UIViewController, FilmesViewDelegate {
         }
     }
     
-    func filmesDidLoad() {
-        self.collectionView.reloadData()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToFilmeDetail" {
             let destination = segue.destination as? FilmePopUpDetailController
@@ -62,6 +69,52 @@ class FilmesGridListController: UIViewController, FilmesViewDelegate {
     }
 }
 
+//MARK: -> Conforms the contoller to FilmeViewDelegate
+/* To reload the collection view after the webservice ends fetching the data from a remote JSON file, we conform with the FilmeViewDelegate
+ * Every time the webservice loads the inofmraiton from the file , the delegate is called, passing the infomation back to the filme list.
+ */
+extension FilmesGridListController: FilmesViewDelegate {
+    func filmesDidLoad() {
+           self.collectionView.reloadData()
+       }
+}
+
+//MARK: -> Setup the splash view
+/* The splash view will load when the sceen will appear.
+ When the animation ends, it will dismiss itself automatically*/
+extension FilmesGridListController {
+    private func setupSplash() {
+        // Do any additional setup after loading the view.
+         splashView.backgroundColor = UIColor.black
+         view.addSubview(splashView)
+         splashView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        
+         splashView.contentMode = .scaleAspectFit
+         splashView.addSubview(logoImage)
+         logoImage.frame = CGRect(x: (splashView.frame.width / 2) - 50, y: (splashView.frame.height / 2) - 50, width: 100, height: 100)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func scaleUpAnimation() {
+        UIView.animate(withDuration: 0.75, delay: 0.1, options: .curveEaseInOut, animations: {
+            self.logoImage.transform = CGAffineTransform(scaleX: 5, y: 5)
+        }) { (success) in
+            self.removeSplashView()
+        }
+    }
+    
+    private func removeSplashView() {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+            self.logoImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }, completion: { (success) in
+            self.splashView.removeFromSuperview()
+            self.navigationController?.navigationBar.isHidden = false
+        })
+        
+    }
+}
+
+//MARK: -> Setup the Collection view
 extension FilmesGridListController: UICollectionViewDelegate, UICollectionViewDataSource {
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
