@@ -19,6 +19,7 @@ class UserEntity: Database {
     private let firstName = Expression<String?>("first_name")
     private let lastName = Expression<String?>("last_name")
     private let email = Expression<String>("email")
+    private let password = Expression<String>("password")
     
     private override init() {
         super.init()
@@ -28,7 +29,8 @@ class UserEntity: Database {
                     table.column(self.id, primaryKey: true)
                     table.column(self.firstName)
                     table.column(self.lastName)
-                    table.column(email)
+                    table.column(self.email)
+                    table.column(self.password)
                 }))
                 print("users table successfully created")
             } else {
@@ -43,9 +45,9 @@ class UserEntity: Database {
     //MARK: -> CRUD Operations
     
     // INSERT INTO users
-    func create(cfirstName: String, clastName: String, cemail: String) -> Int64 {
+    func create(cfirstName: String, clastName: String, cemail: String, cpassword: String) -> Int64 {
         do {
-            let insert = self.tblUsers.insert(firstName <- cfirstName, lastName <- clastName, email <- cemail)
+            let insert = self.tblUsers.insert(firstName <- cfirstName, lastName <- clastName, email <- cemail, password <- cpassword)
              let id = try dbConnection!.run(insert)
              return id
         } catch {
@@ -62,7 +64,8 @@ class UserEntity: Database {
                 users.append(User(id: user[id],
                                   firstName: user[firstName]!,
                                   lastName: user[lastName]!,
-                                  email: user[email]))
+                                  email: user[email],
+                                  password: user[password]))
             }
         } catch {
             print("Select failed")

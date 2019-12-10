@@ -63,8 +63,12 @@ class LoginViewController: UIViewController {
         
         if !email.isEmpty && !password.isEmpty {
             self.setLoading(true)
-            guard let user = AuthVM.signInUser(email: email, password: password) else { return }
-            USER = user
+            if let user = AuthVM().signInUser(email: email, password: password) {
+                USER = user
+            } else {
+                self.setAlert(title: "Error de Accesso", message: "Sua senha esta errada ou a conta não existe")
+            }
+            
             self.performSegue(withIdentifier: "goToHomeView", sender: self)
         } else {
             self.setAlert(title: "Error de Accesso", message: "Preencha todos os campos")

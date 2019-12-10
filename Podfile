@@ -16,6 +16,4 @@ target 'Globo.com_test' do
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
-  
-  
 end

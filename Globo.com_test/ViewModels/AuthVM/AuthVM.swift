@@ -9,32 +9,62 @@
 import Foundation
 import RNCryptor
 
-class AuthVM {
+struct AuthVM {
     
-    static func signInUser(email: String, password: String) -> UserViewModel? {
-        //TODO: Create an user authentication
-        
-        //Reads the user
-        let user = UserViewModel(email: email)
-        return user
+    init(){}
+    
+    private let tokenIdentifier = "TokenIdentifier"
+    
+    private func storeToken(token: String) {
+        UserDefaults.standard.set(token, forKey: self.tokenIdentifier)
     }
     
-    static func signUpUser(firstName: String, lastName: String, email: String, password: String) -> UserViewModel? {
-        //TODO: Create an user authentication
-        
-        
-        //Creates a new user
-        let newUser = UserViewModel(firstName: firstName, lastName: lastName, email: email)
-        return newUser
+    private func checkUserToken() -> String {
+        let token = UserDefaults.standard.value(forKey: tokenIdentifier)
+        return token as! String
     }
     
-    func encryptMessage(message: String, encryptionKey: String) throws -> String {
+    func signInUser(email: String, password: String) -> UserViewModel? {
+        //TODO: Create an user authentication
+        let token = self.checkUserToken()
+        
+        // Check user auth. Then if find user auth, decrypt the auth password and compare aginst each other
+        let authUser = UserViewModel(email: email)
+    
+        do {
+            let decryptedPassword = try self.decryptPassword(encryptedMessage: authUser.password, encryptionKey: token)
+            if password == decryptedPassword {
+                return authUser
+            } else {
+                return nil
+            }
+        } catch {
+            return nil
+        }
+    }
+    
+    func signUpUser(firstName: String, lastName: String, email: String, password: String) -> UserViewModel? {
+        do {
+            let newToken = try generateEncryptionKey(withPassword: password)
+            let encryptedPassword = try encryptPassword(message: password, encryptionKey: newToken)
+            self.storeToken(token: newToken)
+            
+            //TODO: Create an user authentication and sane on auth table
+            //Creates a new user
+            let newUser = UserViewModel(firstName: firstName, lastName: lastName, email: email, password: encryptedPassword)
+            return newUser
+        } catch {
+            return nil
+        }
+    }
+    
+    func encryptPassword(message: String, encryptionKey: String) throws -> String {
         let messageData = message.data(using: .utf8)!
         let cipherData = RNCryptor.encrypt(data: messageData, withPassword: encryptionKey)
         return cipherData.base64EncodedString()
     }
 
-    func decryptMessage(encryptedMessage: String, encryptionKey: String) throws -> String {
+    func decryptPassword(encryptedMessage: String, encryptionKey: String) throws -> String {
 
         let encryptedData = Data.init(base64Encoded: encryptedMessage)!
         let decryptedData = try RNCryptor.decrypt(data: encryptedData, withPassword: encryptionKey)
@@ -43,7 +73,7 @@ class AuthVM {
         return decryptedString
     }
     
-    func generateEncryptionKey(withPassword password:String) throws -> String {
+    private func generateEncryptionKey(withPassword password:String) throws -> String {
         let randomData = RNCryptor.randomData(ofLength: 32)
         let cipherData = RNCryptor.encrypt(data: randomData, withPassword: password)
         return cipherData.base64EncodedString()

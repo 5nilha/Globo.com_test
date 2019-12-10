@@ -49,9 +49,10 @@ class SignUpViewController: UIViewController {
         let lastName = lastNameTextField.text ?? ""
         
         if !email.isEmpty && !password.isEmpty && !firstName.isEmpty && !lastName.isEmpty {
-            if let user =  AuthVM.signUpUser(firstName: firstName, lastName: lastName, email: email, password: password) {
+            if let user =  AuthVM().signUpUser(firstName: firstName, lastName: lastName, email: email, password: password) {
                 USER = user
             } else {
+                self.setAlert(title: "Nova conta erro!", message: "Um erro aconteceu quanto criando sua conta.")
                 return
             }
             self.performSegue(withIdentifier: "goToHomeView", sender: self)

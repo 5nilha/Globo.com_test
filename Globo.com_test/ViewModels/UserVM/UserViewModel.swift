@@ -20,8 +20,8 @@ class UserViewModel {
         favoriteFilmes.readFavorites()
     }
     
-    init(firstName: String, lastName: String, email: String) {
-        self.user = User(id: -1, firstName: firstName, lastName: lastName, email: email)
+    init(firstName: String, lastName: String, email: String, password: String) {
+        self.user = User(id: -1, firstName: firstName, lastName: lastName, email: email, password: password)
         user.create()
         self.favoriteFilmes = FilmesListViewModel()
     }
@@ -44,6 +44,10 @@ class UserViewModel {
     
     var email: String {
         return self.user.email
+    }
+    
+    var password: String {
+        return self.user.password
     }
     
     func readFavoriteMovies(){
