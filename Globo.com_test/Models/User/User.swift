@@ -33,4 +33,8 @@ struct User {
         let user = UserEntity.shared.read(from: email)
         return user
     }
+    
+    func delete() {
+        _ = UserEntity.shared.delete(user: self)
+    }
 }

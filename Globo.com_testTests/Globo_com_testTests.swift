@@ -31,7 +31,8 @@ class Globo_com_testTests: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
-        AuthVM.auth.signOut()
+        self.testUser.deleteAccount()
+        AuthVM.auth.signOut() // The signup here will clean up the user auth in the device
     }
     
     func textUserRegistration() {

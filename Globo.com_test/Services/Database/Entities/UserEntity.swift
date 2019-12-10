@@ -70,4 +70,15 @@ class UserEntity: Database {
             return nil
         }
     }
+    
+    func delete(user: User) -> Bool{
+        do {
+           let user = tblUsers.filter(email == user.email)
+           try self.dbConnection!.run(user.delete())
+           return true
+        } catch {
+           print("Delete failed")
+        }
+        return false
+    }
 }

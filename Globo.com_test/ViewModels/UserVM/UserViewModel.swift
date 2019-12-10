@@ -61,6 +61,10 @@ struct UserViewModel {
         self.favoriteFilmes.clear()
         favoriteFilmes.readFavorites(userId: self.user!.id)
     }
+    
+    func deleteAccount() {
+        self.user?.delete()
+    }
 
 }
 
