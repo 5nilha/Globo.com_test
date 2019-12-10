@@ -53,13 +53,10 @@ class FilmePopUpDetailController: UIViewController {
         self.popUpView.roundBorder(radius: 10)
         self.popUpView.border(color: .white, width: 2)
         self.addFavoritesButton.border(color: .white, width: 2)
-        print("FAV filme \(filme.title)")
         if USER.favoriteFilmes.contains(filme: self.filme) {
-            print("Contains filme")
             self.addFavoritesButton.tag = 1
             self.addFavoritesButton.setTitle("Remover de Favoritos", for: .normal)
         } else {
-            print("Contains nao contains")
             self.addFavoritesButton.setTitle("Adicionar Favoritos", for: .normal)
             self.addFavoritesButton.tag = 0
         }
