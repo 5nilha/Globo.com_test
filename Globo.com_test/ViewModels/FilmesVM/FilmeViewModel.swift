@@ -56,7 +56,7 @@ struct FilmeViewModel {
     }
     
     var releasedAt: String {
-        return filme.releasedAt.formmatedDateForPortuguese
+        return "\(Calendar.current.component(.year, from: filme.releasedAt))"
     }
     
     

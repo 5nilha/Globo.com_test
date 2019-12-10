@@ -17,6 +17,6 @@ extension Date {
         let monthString = formater.string(from: self).capitalized // "maio"
         let calendar = Calendar.current
         
-        return "\(monthString) \(calendar.component(.day, from: self)), \(calendar.component(.year, from: self))"
+        return "\(monthString) \(calendar.component(.year, from: self))"
     }
 }
