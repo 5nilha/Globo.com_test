@@ -55,7 +55,7 @@ class FilmesListViewModel {
     
     func contains(filme: FilmeViewModel) -> Bool {
         if self.filmes.contains(where: { (favorite) -> Bool in
-            return filme.title == favorite.title
+            return filme.id == favorite.id
         }) {
             return true
         } else {

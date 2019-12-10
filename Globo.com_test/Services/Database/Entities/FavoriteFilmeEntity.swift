@@ -71,6 +71,7 @@ class FavoriteFilmeEntity: Database {
         
         do {
             for filme in try dbConnection!.prepare("SELECT * FROM favorite_filmes WHERE user_id = \(userId) ") {
+                print("FIlms \(filme[2] as! String)")
                 favFilmes.append(Filme(id: filme[0] as! Int64,
                                        coverImageURL: filme[1] as! String,
                                        title: filme[2] as! String,

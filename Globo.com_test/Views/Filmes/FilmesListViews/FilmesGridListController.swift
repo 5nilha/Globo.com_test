@@ -137,7 +137,11 @@ extension FilmesGridListController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedFilme = self.filmesListViewModel.filmeForCellAt(indexPath: indexPath)
+        if segmentedControl.selectedSegmentIndex == 0 {
+            selectedFilme = self.filmesListViewModel.filmeForCellAt(indexPath: indexPath)
+        } else {
+            selectedFilme = USER.favoriteFilmes.filmeForCellAt(indexPath: indexPath)
+        }
         performSegue(withIdentifier: "goToFilmeDetail", sender: self)
     }
     
