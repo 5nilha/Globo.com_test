@@ -21,9 +21,9 @@ class FavoriteFilmeEntity: Database {
     let subtitle = Expression<String>("subtitle")
     let duration = Expression<String>("duration")
     let synopsis = Expression<String>("synopsis")
-    let thumb = Expression<Int>("thumb")
+    let thumb = Expression<Int64>("thumb")
     let category = Expression<String>("category")
-    let releasedAt = Expression<Int>("releasedAt")
+    let releasedAt = Expression<Int64>("releasedAt")
     let userID = Expression<Int64>("user_id")
     
     private override init() {
@@ -48,9 +48,7 @@ class FavoriteFilmeEntity: Database {
     
     
     //MARK: -> CRUD Operations
-    
-    // INSERT INTO users
-    func create(ccoverImageURL: String, ctitle: String, csubtitle: String, cduration: String, csynopsis: String, cthumb: Int, ccategory: String, creleasedAt: Int, cuserID: Int64) -> Int64 {
+    func create(ccoverImageURL: String, ctitle: String, csubtitle: String, cduration: String, csynopsis: String, cthumb: Int64, ccategory: String, creleasedAt: Int64, cuserID: Int64) -> Int64 {
         do {
             let insert = self.tblFilmes.insert(coverImageURL <- ccoverImageURL,
                                                title <- ctitle,
@@ -68,26 +66,24 @@ class FavoriteFilmeEntity: Database {
         }
     }
     
-    // SELECT * FROM "users"
-    func read() -> [Filme] {
+    func read(for userId: Int64 ) -> [Filme] {
         var favFilmes = [Filme]()
         
         do {
-            for filme in try dbConnection!.prepare(self.tblFilmes) {
-                favFilmes.append(Filme(id: filme[id],
-                                       coverImageURL: filme[coverImageURL],
-                                       title: filme[title],
-                                       subtitle: filme[subtitle],
-                                       duration: filme[duration],
-                                       synopsis: filme[synopsis],
-                                       thumb: filme[thumb],
-                                       category: filme[category],
-                                       releasedAt: filme[releasedAt]))
+            for filme in try dbConnection!.prepare("SELECT * FROM favorite_filmes WHERE user_id = \(userId) ") {
+                favFilmes.append(Filme(id: filme[0] as! Int64,
+                                       coverImageURL: filme[1] as! String,
+                                       title: filme[2] as! String,
+                                       subtitle: filme[3] as! String,
+                                       duration: filme[4] as! String,
+                                       synopsis: filme[5] as! String,
+                                       thumb: filme[6] as! Int64,
+                                       category: filme[7] as! String,
+                                       releasedAt: filme[8] as! Int64))
             }
         } catch {
             print("Select failed")
         }
-        
         return favFilmes
     }
     
@@ -102,7 +98,7 @@ class FavoriteFilmeEntity: Database {
                 synopsis <- filme.synopsis,
                 thumb <- filme.thumb,
                 category <- filme.category,
-                releasedAt <- Int(filme.releasedAt.timeIntervalSince1970)
+                releasedAt <- Int64(filme.releasedAt.timeIntervalSince1970)
                 ])
             if try self.dbConnection!.run(update) > 0 {
                 return true

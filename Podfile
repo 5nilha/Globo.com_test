@@ -10,10 +10,4 @@ target 'Globo.com_test' do
   pod 'SQLite.swift', :git => 'https://github.com/stephencelis/SQLite.swift.git', :branch => 'master'
   pod 'RNCryptor'
   
-  # add pods for desired Firebase products
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Firestore'
-  pod 'Firebase/Database'
 end

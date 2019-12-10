@@ -15,11 +15,11 @@ struct Filme {
     let subtitle: String
     let duration: String
     let synopsis: String
-    let thumb: Int
+    let thumb: Int64
     let category: String!
     let releasedAt: Date!
     
-    init(id: Int64, coverImageURL: String, title: String, subtitle: String, duration: String, synopsis: String, thumb: Int, category: String, releasedAt: Int) {
+    init(id: Int64, coverImageURL: String, title: String, subtitle: String, duration: String, synopsis: String, thumb: Int64, category: String, releasedAt: Int64) {
         self.id = id
         self.coverImageURL = coverImageURL
         self.title = title
@@ -37,9 +37,9 @@ struct Filme {
             let subtitle = json["subtitle"] as? String,
             let duration = json["duration"] as? String,
             let synopsis = json["synopsis"] as? String,
-            let thumb = json["reviews"] as? Int,
+            let thumb = json["reviews"] as? Int64,
             let category = json["movie_category"] as? String,
-            let releasedAt = json["released_at"] as? Int
+            let releasedAt = json["released_at"] as? Int64
         else {
             return nil
         }
@@ -55,7 +55,6 @@ struct Filme {
         self.releasedAt = Date(timeIntervalSince1970: Double(releasedAt))
     }
     
-    
     mutating func create() {
         let id = FavoriteFilmeEntity.shared.create(ccoverImageURL: self.coverImageURL,
                                                    ctitle: self.title,
@@ -64,16 +63,15 @@ struct Filme {
                                                    csynopsis: self.synopsis,
                                                    cthumb: self.thumb,
                                                    ccategory: self.category,
-                                                   creleasedAt: Int(self.releasedAt.timeIntervalSince1970),
+                                                   creleasedAt: Int64(self.releasedAt.timeIntervalSince1970),
                                                    cuserID: USER!.id)
         self.id = id
     }
     
-    static func read() -> [Filme] {
-        let filmes = FavoriteFilmeEntity.shared.read()
+    static func read(for user_id: Int64) -> [Filme] {
+        let filmes = FavoriteFilmeEntity.shared.read(for: user_id)
         return filmes
     }
-    
     
     func update() {
         _ = FavoriteFilmeEntity.shared.update(cid: self.id, filme: self)

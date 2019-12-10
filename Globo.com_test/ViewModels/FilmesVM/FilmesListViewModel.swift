@@ -31,9 +31,9 @@ class FilmesListViewModel {
         filmes.removeAll()
     }
     
-    func readFavorites() {
+    func readFavorites(userId: Int64) {
         var filmesVM = [FilmeViewModel]()
-        for filme in Filme.read() {
+        for filme in Filme.read(for: userId) {
             filmesVM.append(FilmeViewModel(filme: filme))
         }
         self.filmes = filmesVM

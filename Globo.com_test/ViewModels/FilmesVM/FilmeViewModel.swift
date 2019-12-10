@@ -15,18 +15,14 @@ struct FilmeViewModel {
         self.filme = filme
     }
     
-    
     init? (filmeJSON: [String : Any]) {
         let filme = Filme(json: filmeJSON)
         if let filme = filme {
             self.filme = filme
         } else {
             return nil
-            
         }
     }
-    
-    var img: UIImage = #imageLiteral(resourceName: "Default_movie_img")
     
     var id: Int64 {
         return filme.id
@@ -61,29 +57,6 @@ struct FilmeViewModel {
     
     var releasedAt: String {
         return filme.releasedAt.formmatedDateForPortuguese
-    }
-    
-    var defaultCoverImage : UIImage = {
-        let image = UIImage(named: "Default_movie_img")!
-        return image
-    }()
-    
-    func loadCoverImage(completion: @escaping (UIImage) -> Void) {
-        print("Download Started")
-        if let url = self.coverImageURL {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                guard let data = data else {
-                    completion(self.defaultCoverImage)
-                    return
-                }
-                DispatchQueue.main.async() {
-                    let image = UIImage(data: data)
-                    completion(image ?? self.defaultCoverImage)
-                }
-            }
-        } else {
-            completion(self.defaultCoverImage)
-        }
     }
     
     

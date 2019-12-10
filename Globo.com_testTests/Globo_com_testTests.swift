@@ -31,20 +31,18 @@ class Globo_com_testTests: XCTestCase {
 
     override func tearDown() {
         super.tearDown()
-        Auth.signOut()
+        AuthVM.auth.signOut()
     }
     
     func textUserRegistration() {
-        Auth.signUpUser(email: "test@test.com", password: "passW0rd", firstName: "Test", lastName: "Test") { (user, error) in
-            XCTAssertNotNil(user)
-        }
+        let user = AuthVM.auth.signUpUser(firstName: "test@test.com", lastName: "passW0rd", email: "Test", password: "Test")
+        XCTAssertNotNil(user)
     }
     
     func testUserAuthorization() {
-        Auth.signInUser(email: "test@test.com", password: "passW0rd") { (user, error) in
-            XCTAssertNotNil(user)
-            self.testUser = user
-        }
+        let user = AuthVM.auth.signInUser(email: "test@test.com", password: "passW0rd")
+        XCTAssertNotNil(user)
+        self.testUser = user
     }
     
     func deletingUser() {
@@ -52,7 +50,7 @@ class Globo_com_testTests: XCTestCase {
     }
     
     func testFilmeObject() {
-        testFilme = FilmeViewModel(filme: testFilmeData)
+        testFilme = FilmeViewModel(filmeJSON: testFilmeData)
         XCTAssert(testFilme != nil)
     }
     

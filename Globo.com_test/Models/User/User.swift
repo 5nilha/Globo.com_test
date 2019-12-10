@@ -15,8 +15,6 @@ struct User {
     let email: String
     let password: String
     
-    
-    
     init(id: Int64, firstName: String, lastName: String , email: String, password: String) {
         self.id = id
         self.firstName = firstName
@@ -31,8 +29,8 @@ struct User {
         self.id = id
     }
     
-    static func read(email: String) -> User {
-        let user = UserEntity.shared.read()
-        return user.first!
+    static func read(email: String) -> User? {
+        let user = UserEntity.shared.read(from: email)
+        return user
     }
 }

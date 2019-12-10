@@ -27,7 +27,6 @@ class Webservices {
                 completion(nil)
                 return
             }
-            print(filmesData)
             var filmes = [FilmeViewModel]()
             for filmeDic in filmesData {
                 let filme = FilmeViewModel(filmeJSON: filmeDic)
@@ -39,21 +38,6 @@ class Webservices {
                 return a.title < b.title
             }
             completion(filmes)
-            
-        }
-    }
-    
-    
-    func deleteRealmAuthentication(token: String) {
-        guard let url = URL(string: "http://my-ros-instance:9080/auth/user/:user_id") else {
-            return
-        }
-        
-        let userToken = token
-        let headers = ["Authorization": userToken]
-        
-        Alamofire.request(url, method: .delete, headers: headers).responseJSON { (response) in
-            print(response.result)
         }
     }
 }

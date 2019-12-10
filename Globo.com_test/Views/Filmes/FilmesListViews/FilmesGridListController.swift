@@ -56,12 +56,14 @@ class FilmesGridListController: UIViewController, FilmesViewDelegate {
             destination?.filme = selectedFilme
         }
     }
-
+    
+    @IBAction func settingsClicked() {
+        performSegue(withIdentifier: "goToSettings", sender: self)
+    }
 }
 
 extension FilmesGridListController: UICollectionViewDelegate, UICollectionViewDataSource {
    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if segmentedControl.selectedSegmentIndex == 0 {
             return filmesListViewModel != nil ? filmesListViewModel.numOfFilmes : 0

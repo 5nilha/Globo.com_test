@@ -43,8 +43,6 @@ class UserEntity: Database {
     
     
     //MARK: -> CRUD Operations
-    
-    // INSERT INTO users
     func create(cfirstName: String, clastName: String, cemail: String, cpassword: String) -> Int64 {
         do {
             let insert = self.tblUsers.insert(firstName <- cfirstName, lastName <- clastName, email <- cemail, password <- cpassword)
@@ -55,22 +53,21 @@ class UserEntity: Database {
         }
     }
     
-    // SELECT * FROM "users"
-    func read() -> [User] {
+    func read(from email: String) -> User? {
         var users = [User]()
         
         do {
-            for user in try dbConnection!.prepare(self.tblUsers) {
-                users.append(User(id: user[id],
-                                  firstName: user[firstName]!,
-                                  lastName: user[lastName]!,
-                                  email: user[email],
-                                  password: user[password]))
+            for user in try dbConnection!.prepare("SELECT * FROM users WHERE email = '\(email)' ") {
+                users.append(User(id: user[0] as! Int64,
+                                  firstName: user[1] as! String,
+                                  lastName: user[2] as! String,
+                                  email: user[3]!  as! String,
+                                  password: user[4] as! String))
             }
+            return users.count > 0 ? users.first : nil
         } catch {
             print("Select failed")
+            return nil
         }
-        
-        return users
     }
 }

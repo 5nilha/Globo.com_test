@@ -25,10 +25,11 @@ class LoginViewController: UIViewController {
     /* setupView will setup the outlets on the view */
     private func setupView() {
         //Round corners
-        self.emailTextField.roundBorder(radius: 8)
-        self.passwordTextField.roundBorder(radius: 8)
-        self.signInButton.roundBorder(radius: 10)
-        self.SignUpButton.roundBorder(radius: 10)
+        let dimensions = CGFloat(10)
+        self.emailTextField.roundBorder(radius: dimensions)
+        self.passwordTextField.roundBorder(radius: dimensions)
+        self.signInButton.roundBorder(radius: dimensions)
+        self.SignUpButton.roundBorder(radius: dimensions)
         
         //Set placeholders
         self.emailTextField.placeholder = "Insira seu email"
@@ -63,14 +64,15 @@ class LoginViewController: UIViewController {
         
         if !email.isEmpty && !password.isEmpty {
             self.setLoading(true)
-            if let user = AuthVM().signInUser(email: email, password: password) {
+            if let user = AuthVM.auth.signInUser(email: email, password: password) {
                 USER = user
             } else {
                 self.setAlert(title: "Error de Accesso", message: "Sua senha esta errada ou a conta não existe")
             }
-            
+            self.setLoading(false)
             self.performSegue(withIdentifier: "goToHomeView", sender: self)
         } else {
+            self.setLoading(false)
             self.setAlert(title: "Error de Accesso", message: "Preencha todos os campos")
             return
         }
