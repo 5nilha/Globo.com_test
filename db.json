@@ -7,7 +7,7 @@
       "duration": "2h 05m",
       "synopsis": "Um dos maiores sucessos de todos os tempos do cinema francês, Intocáveis, lançado em 2012, ganha aqui seu inevitável remake hollywoodiano. Bryan Cranston, o eterno Walter White de Breaking Bad, assume o papel do milionário tetraplégico que contrata um homem negro com um passado problemático para ser seu assistente e ajudá-lo nas tarefas do dia a dia – o personagem é vivido pelo comediante Kevin Hart. Os dois homens têm dificuldade para se aproximar, mas acabam desenvolvendo uma forte amizade.",
       "reviews": 4,
-      "movie_category": "Comédia e Drama",
+      "movie_category": "Comédia/Drama",
       "released_at": 1547186500
     },
     {
@@ -39,6 +39,46 @@
       "reviews": 2,
       "movie_category": "Drama",
       "released_at": 1547186400
+    },
+    {
+      "cover_image": "",
+      "title": "Meu passado me condena",
+      "subtitle": "Dublado",
+      "duration": "1h 42m",
+      "synopsis": "Fábio e Miá fazem um cruzeiro do Rio de Janeiro até a Europa em lua de mel, onde ela reencontra seu ex-namorado Beto, que está casado com Laura, antiga paixão de Fábio. Atrapalhados com essa coincidência, o casal vive situações cômicas e embaraçosas.",
+      "reviews": 18,
+      "movie_category": "Comédia",
+      "released_at": 1382686257
+    },
+    {
+		"cover_image": "",
+		"title": "Entre Facas e Segredos",
+		"subtitle": "Inglês",
+		"duration": "2h 11m",
+		"synopsis": "Após comemorar 85 anos de idade, o famoso escritor de histórias policiais Harlan Thrombey (Christopher Plummer) é encontrado morto dentro de sua propriedade. Logo, o detetive Benoit Blanc (Daniel Craig) é contratado para investigar o caso e descobre que, entre os funcionários misteriosos e a família conflituosa de Harlan, todos podem ser considerados suspeitos do crime.",
+		"reviews": 52,
+		"movie_category": "Comédia/Drama",
+		"released_at": 1576135857
+    },
+    {
+      "cover_image": "",
+      "title": "Vingadores - Guerra Infinita",
+      "subtitle": "Inglês",
+      "duration": "2h 24m",
+      "synopsis": "O cruel Thanos pretende reunir todas as Joias do Infinito em sua manopla para tornar-se o mais poderoso da galaxia e ser capaz de decidir o futuro da humanidade. Os Vingadores entao se unem aos Guardioes da Galaxia e ao Pantera Negra na maior guerra de todos os tempos para impedir os planos do vilao.",
+      "reviews": 18,
+      "movie_category": "Ação",
+      "released_at": 1524727857
+    },
+    {
+      "cover_image": "",
+      "title": "Mad Max: Estrada da Furia",
+      "subtitle": "Inglês",
+      "duration": "2h",
+      "synopsis": "Perseguido pelo seu turbulento passado, Max Rockatansky (Tom Hardy) acredita que a melhor forma de sobreviver é não depender de mais ninguém além de si próprio. Ainda assim, acaba por se juntar a um grupo de rebeldes que atravessa a Wasteland, numa máquina de guerra conduzida por uma Imperatriz de elite, Furiosa (Charlize Theron). Este bando está em fuga de uma pequena cidade tiranizada por Immortan Joe (Hugh Keays-Byrne), a quem algo insubstituível foi roubado. Desesperado com a sua perda, o Senhor da Guerra reúne o seu exército e inicia uma impiedosa perseguição aos rebeldes e a mais implacável Guerra na Estrada de sempre.",
+      "reviews": 22,
+      "movie_category": "Ação",
+      "released_at": 1524727857
     }
   ]
 }
