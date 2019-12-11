@@ -33,6 +33,7 @@
 		3E0D3B96239E5246000ABD34 /* FilmePopUpDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D3B95239E5246000ABD34 /* FilmePopUpDetailController.swift */; };
 		3E6A25AF239F640400636F4E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A25AE239F640400636F4E /* SettingsViewController.swift */; };
 		3E6A25B2239F644700636F4E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A25B1239F644700636F4E /* SettingCell.swift */; };
+		3E6A25BB23A04E8000636F4E /* FilmesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A25BA23A04E8000636F4E /* FilmesViewDelegate.swift */; };
 		F6662161A0CD243FA789411B /* Pods_Globo_com_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73564A392130E4FC5167A240 /* Pods_Globo_com_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		3E0D3B95239E5246000ABD34 /* FilmePopUpDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmePopUpDetailController.swift; sourceTree = "<group>"; };
 		3E6A25AE239F640400636F4E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3E6A25B1239F644700636F4E /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		3E6A25BA23A04E8000636F4E /* FilmesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesViewDelegate.swift; sourceTree = "<group>"; };
 		58B62CAAD66812CA0A10EDBA /* Pods-Globo.com_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globo.com_test.release.xcconfig"; path = "Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test.release.xcconfig"; sourceTree = "<group>"; };
 		73564A392130E4FC5167A240 /* Pods_Globo_com_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Globo_com_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5D444F2295D0DC86B4789C /* Pods-Globo.com_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globo.com_test.debug.xcconfig"; path = "Target Support Files/Pods-Globo.com_test/Pods-Globo.com_test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 		3E0D3B1D239C25E4000ABD34 /* Globo.com_test */ = {
 			isa = PBXGroup;
 			children = (
-				3E0D3B59239D0F80000ABD34 /* Properties */,
+				3E6A25B923A04E1F00636F4E /* Protocols */,
 				3E0D3B41239C3FD9000ABD34 /* Extensions */,
 				3E0D3B3B239C3330000ABD34 /* Views */,
 				3E0D3B38239C2DA7000ABD34 /* Services */,
@@ -186,13 +188,6 @@
 				3E0D3B84239DD0E4000ABD34 /* Extension+ViewController.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3E0D3B59239D0F80000ABD34 /* Properties */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Properties;
 			sourceTree = "<group>";
 		};
 		3E0D3B5F239D12FC000ABD34 /* Globo.com_testTests */ = {
@@ -305,6 +300,14 @@
 				3E6A25B1239F644700636F4E /* SettingCell.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		3E6A25B923A04E1F00636F4E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3E6A25BA23A04E8000636F4E /* FilmesViewDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		E521D57DAE69C3B55F537EA4 /* Pods */ = {
@@ -481,6 +484,7 @@
 				3E0D3B71239D1DA2000ABD34 /* User.swift in Sources */,
 				3E0D3B8B239E1570000ABD34 /* UserEntity.swift in Sources */,
 				3E0D3B21239C25E4000ABD34 /* SceneDelegate.swift in Sources */,
+				3E6A25BB23A04E8000636F4E /* FilmesViewDelegate.swift in Sources */,
 				3E0D3B87239E0FFF000ABD34 /* Database.swift in Sources */,
 				3E0D3B85239DD0E4000ABD34 /* Extension+ViewController.swift in Sources */,
 				3E0D3B7B239DBA08000ABD34 /* UserViewModel.swift in Sources */,

@@ -49,7 +49,6 @@ class FilmesGridListController: UIViewController {
     }
     
     @objc func segmentedControlChanged() {
-        print("State : \(self.segmentedControl.selectedSegmentIndex)")
         if segmentedControl.selectedSegmentIndex == 0 {
              self.filmesListViewModel.loadFilmes()
         } else {
@@ -62,6 +61,7 @@ class FilmesGridListController: UIViewController {
         if segue.identifier == "goToFilmeDetail" {
             let destination = segue.destination as? FilmePopUpDetailController
             destination?.filme = selectedFilme
+            destination?.filmeDelegate = self
         }
     }
     
@@ -76,8 +76,12 @@ class FilmesGridListController: UIViewController {
  */
 extension FilmesGridListController: FilmesViewDelegate {
     func filmesDidLoad() {
-           self.collectionView.reloadData()
-       }
+        self.collectionView.reloadData()
+    }
+    
+    func filmesDidUpdate() {
+        self.collectionView.reloadData()
+    }
 }
 
 //MARK: -> Setup the splash view

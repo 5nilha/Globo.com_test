@@ -29,6 +29,7 @@ class FilmePopUpDetailController: UIViewController {
     @IBOutlet weak var addFavoritesButton: UIButton!
     @IBOutlet weak var sinopseTextView: UITextView!
     
+    var filmeDelegate: FilmesViewDelegate!
     var filme: FilmeViewModel!
 
     override func viewDidLoad() {
@@ -77,7 +78,8 @@ class FilmePopUpDetailController: UIViewController {
     }
 
     @IBAction func screenTapped(_ sender: UITapGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+        }
     }
     
     @IBAction func addFavoritesClicked(_ sender: UIButton) {
@@ -91,6 +93,8 @@ class FilmePopUpDetailController: UIViewController {
              self.addFavoritesButton.tag = 0
             self.addFavoritesButton.setTitle("Adicionar Favoritos", for: .normal)
         }
-        
+        if self.filmeDelegate != nil {
+            self.filmeDelegate.filmesDidUpdate()
+        }
     }
 }

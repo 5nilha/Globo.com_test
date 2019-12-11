@@ -7,9 +7,6 @@
 //
 
 import Foundation
-protocol FilmesViewDelegate {
-    func filmesDidLoad()
-}
 
 class FilmesListViewModel {
     private var filmes: [FilmeViewModel]
@@ -49,7 +46,6 @@ class FilmesListViewModel {
                 break
             }
         }
-        print("deleted: \(filmes)")
         filme.removeFromFavorites()
     }
     
